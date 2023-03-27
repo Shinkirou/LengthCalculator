@@ -20,10 +20,19 @@ namespace LengthCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+        string strInput; 
+        double douOutput; 
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        //private void TestBox_TextChanged(object sender, TextChangedEventArgs e)
+        //{
+
+        // }
 
         private void btnAllClear_Click(object sender, RoutedEventArgs e)
         {
@@ -37,15 +46,23 @@ namespace LengthCalculator
 
         private void txtCM_KeyUp(object sender, KeyEventArgs e)
         {
-            double douCM; 
+            strInput = txtCM.Text; // 將txtCM文字框的值放入strInput變數
 
-            douCM = Convert.ToDouble(txtCM.Text);
-
-            txtM.Text = string.Format("{0:0.##########}", douCM / 100);
-            txtKM.Text = string.Format("{0:0.##########}", douCM / 100000);
-            txtIn.Text = string.Format("{0:0.##########}", douCM / 2.54);
-            txtFt.Text = string.Format("{0:0.##########}", douCM / 30.48);
-            txtYard.Text = string.Format("{0:0.##########}", douCM / 91.44);
+            // 判斷式，如果能夠以double.TryParse成功轉型，那才做數值的計算
+            if (double.TryParse(strInput, out douOutput) == true)
+            {
+                txtM.Text = string.Format("{0:0.##########}", douOutput / 100);
+                txtKM.Text = string.Format("{0:0.##########}", douOutput / 100000);
+                txtIn.Text = string.Format("{0:0.##########}", douOutput / 2.54);
+                txtFt.Text = string.Format("{0:0.##########}", douOutput / 30.48);
+                txtYard.Text = string.Format("{0:0.##########}", douOutput / 91.44);
+            }
+            else
+            {
+                // 如果無法轉型，則是在說明文字中顯示錯誤訊息，並且將txtCM文字框清除
+                txtInfo1.Text = "請輸入數字";
+                txtCM.Text = "";
+            }
         }
 
         private void txtM_KeyUp(object sender, KeyEventArgs e)

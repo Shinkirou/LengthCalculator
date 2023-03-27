@@ -9,7 +9,7 @@
     <Grid>
         <Label x:Name="txtInfo" Content="" HorizontalAlignment="Center" Margin="0,51,0,0" VerticalAlignment="Top" Width="700"/>
         <TextBox x:Name="txtCM" HorizontalAlignment="Left" Margin="54,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="txtCM_KeyUp"/>
-        <Button x:Name="btnAllClear" Content="清除" HorizontalAlignment="Left" Margin="114,284,0,0" VerticalAlignment="Top" Height="66" Width="379" FontSize="36" Click="btnAllClear_Click"/>
+        <Button x:Name="btnAllClear" Content="清除" HorizontalAlignment="Left" Margin="114,342,0,0" VerticalAlignment="Top" Height="66" Width="379" FontSize="36" Click="btnAllClear_Click"/>
         <Label x:Name="CM" Content="公分" HorizontalAlignment="Left" Margin="86,63,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label x:Name="M" Content="公尺" HorizontalAlignment="Center" Margin="0,63,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label x:Name="KM" Content="公里" HorizontalAlignment="Left" Margin="468,63,0,0" VerticalAlignment="Top" FontSize="20"/>
@@ -21,6 +21,7 @@
         <Label Content="英碼" HorizontalAlignment="Left" Margin="468,192,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label Content="英呎" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" Margin="0,192,0,0"/>
         <Label x:Name="In" Content="英吋" HorizontalAlignment="Left" Margin="86,192,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtInfo1" HorizontalAlignment="Left" Margin="114,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="379" TextChanged="TextBox_TextChanged"/>
 
     </Grid>
 </Window>
