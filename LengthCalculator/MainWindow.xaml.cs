@@ -25,6 +25,16 @@ namespace LengthCalculator
             InitializeComponent();
         }
 
+        private void btnAllClear_Click(object sender, RoutedEventArgs e)
+        {
+            txtCM.Text = "";
+            txtM.Text = "";
+            txtKM.Text = "";
+            txtIn.Text = "";
+            txtFt.Text = "";
+            txtYard.Text = "";
+        }
+
         private void txtCM_KeyUp(object sender, KeyEventArgs e)
         {
             double douCM; 
