@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="604">
     <Grid>
         <Label x:Name="txtInfo" Content="" HorizontalAlignment="Center" Margin="0,51,0,0" VerticalAlignment="Top" Width="700"/>
-        <TextBox x:Name="txtCM" HorizontalAlignment="Left" Margin="54,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCM" HorizontalAlignment="Left" Margin="54,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="txtCM_KeyUp"/>
         <Button x:Name="btnAllClear" Content="清除" HorizontalAlignment="Left" Margin="114,284,0,0" VerticalAlignment="Top" Height="66" Width="379" FontSize="36"/>
         <Label x:Name="CM" Content="公分" HorizontalAlignment="Left" Margin="86,63,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label x:Name="M" Content="公尺" HorizontalAlignment="Center" Margin="0,63,0,0" VerticalAlignment="Top" FontSize="20"/>
